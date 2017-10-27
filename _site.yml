@@ -1,7 +1,7 @@
 name: "ICEBERG"
 output_dir: "."
 navbar:
-  title: "ICEBERG"
+#  title: "ICEBERG"
   left:
     - text: "Home"
       href: index.html
@@ -13,7 +13,8 @@ navbar:
           href: partners.html
     - text: "Projects"
       href: ICEBERGscience.html
-#output:
-#    html_document:
-#      theme: jekyll-theme-cayman
-#      highlight: textmate
+output:
+  html_document:
+    theme: simplex
+    highlight: haddock
+
