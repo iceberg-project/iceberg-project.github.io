@@ -6,4 +6,14 @@ navbar:
     - text: "Home"
       href: index.html
     - text: "About"
-      href: about.html
+      menu:
+        - text: "ICEBERG team"
+          href: about.html
+        - text: "ICEBERG partners"
+          href: about.html
+    - text: "Projects"
+      href: ICEBERGscience.html
+#output:
+#    html_document:
+#      theme: jekyll-theme-cayman
+#      highlight: textmate

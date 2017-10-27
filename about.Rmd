@@ -4,13 +4,13 @@ title: "About Us"
 
 ICEBERG is a highly collaborative project, with five PIs:
 
-Heather Lynch (Department of Ecology & Evolution/Institute for Advanced Computational Science, Stony Brook University)
+[Heather Lynch](http://lynchlab.com) (Department of Ecology & Evolution/Institute for Advanced Computational Science, Stony Brook University)
 
-Shantenu Jha (Department of Electrical and Computer Engineering, Rutgers University)
+[Shantenu Jha](http://radical.rutgers.edu/people/shantenu-jha/) (Department of Electrical and Computer Engineering, Rutgers University)
 
-Vena Chu (Department of Geography, University of California Santa Barbara)
+[Vena Chu](http://www.venachu.com/about.html) (Department of Geography, University of California Santa Barbara)
 
-Mike Willis (Department of Geological Sciences, University of Colorado Boulder)
+[Mike Willis](http://cires.colorado.edu/council-fellows/michael-willis) (Department of Geological Sciences, University of Colorado Boulder)
 
 Mark Salvatore (Department of Physics and Astronomy, Northern Arizona University)
 
