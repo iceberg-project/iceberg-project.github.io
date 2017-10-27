@@ -10,7 +10,7 @@ navbar:
         - text: "ICEBERG team"
           href: about.html
         - text: "ICEBERG partners"
-          href: about.html
+          href: partners.html
     - text: "Projects"
       href: ICEBERGscience.html
 #output:
