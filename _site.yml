@@ -1,0 +1,8 @@
+name: "ICEBERG"
+navbar:
+  title: "ICEBERG"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
