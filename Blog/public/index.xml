@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ICEBERG Blog: News, Notes, and Updates</title>
+    <link>/</link>
+    <description>Recent content on ICEBERG Blog: News, Notes, and Updates</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 29 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New ICEBERG blog</title>
+      <link>/post/testing-new-post/</link>
+      <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/testing-new-post/</guid>
+      <description>Welcome to the brand new ICEBERG blog. This is our way of communicating any project news or updates and highlighting new modules as they get tested and made available through git.</description>
+    </item>
+    
+    <item>
+      <title>TAC presentation coming up this Thursday</title>
+      <link>/post/tac-presentation-coming-up-this-thursday/</link>
+      <pubDate>Sun, 29 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/tac-presentation-coming-up-this-thursday/</guid>
+      <description>This Thursday Shantenu and I will be introducing ICEBERG at the TAC Telecon, mor details for joining the call here.</description>
+    </item>
+    
+  </channel>
+</rss>

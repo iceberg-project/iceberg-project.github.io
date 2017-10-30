@@ -13,6 +13,8 @@ navbar:
           href: partners.html
     - text: "Projects"
       href: ICEBERGscience.html
+    - text: "Blog"
+      href: Hugowebsite.html
 output:
   html_document:
     theme: simplex
