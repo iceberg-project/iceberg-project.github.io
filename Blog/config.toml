@@ -1,9 +1,0 @@
-baseurl = "/"
-languageCode = "en"
-title = "ICEBERG Blog: News, Notes, and Updates"
-theme = "hugo-gentoo-theme-master"
-disqusShortname = "shortname"
-googleAnalytics = ""
-# Number of posts per page
-Paginate = 5
-enableRobotsTXT = true
