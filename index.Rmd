@@ -23,4 +23,4 @@ Satellite imagery is rapidly transforming the way we see the planet, including o
 
 ICEBERG is supported by the NSF EarthCube program [1740595](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1740595&HistoricalAwards=false). More information about our project and its relationship to EarthCube can be found at our [EarthCube site](https://www.earthcube.org/group/iceberg-imagery-cyberinfrastructure-extensible-building-blocks-enhance-research-geosciences).
 
-![](test_image.jpg)
+![](Petermann_Credit_Lynch.jpg)
