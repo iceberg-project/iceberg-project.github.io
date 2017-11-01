@@ -13,6 +13,8 @@ navbar:
           href: partners.html
     - text: "Projects"
       href: ICEBERGscience.html
+    - text: "Opportunities"
+      href: opportunities.html
 
 output:
   html_document:
