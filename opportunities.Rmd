@@ -9,7 +9,7 @@ body{ /* Normal  */
 }
 </style>
 
-We are currently recruiting two Ph.D. positions associated with ICEBERG. Descriptions of each position are below. Additional PhD, post-doc and research programming positions are also being recruited for ICEBERG; prospective students, post-docs, and research programmers with an interest in combining satellite imagery and high performance computing should contact ICEBERG PI Heather Lynch (heather.lynch@stonybrook.edu) for more information.
+We are currently recruiting two Ph.D. positions associated with ICEBERG, and two research programmer positions. Descriptions of each position are below. Prospective students, post-docs, and research programmers with an interest in combining satellite imagery and high performance computing should contact ICEBERG PI Heather Lynch (heather.lynch@stonybrook.edu) for more information.
 
 **Northern Arizona University**
 
@@ -23,3 +23,62 @@ The Cryo-Hydrologic Remote Sensing Lab in the Department of Geography at the Uni
 Candidates with a background in remote sensing, GIS, or earth science, and strong programming skills (e.g. in IDL, Python, Matlab) are encouraged to apply.
 
 Applicants should contact Prof. Vena Chu (venachu@ucsb.edu) with a CV/resume and a statement of research interests. For more information about the Graduate Program in Geography at UCSB, see the Geography Graduate Program Description (application deadline is December 15th).
+
+**Stony Brook University**
+
+The applicant will be responsible for prototyping and delivering production grade cyberinfrastructure for polar imagery processing workflows in high-performance and distributed computing. This includes imagery applications, libraries and workflow toolkits. Knowledge of Image analysis, GIS and Remote Sensing concepts is helpful but not mandatory. 
+
+Primary responsibilities include but are not limited to:
+
+* Develop tools and software frameworks that can effectively utilize high-performance and distributed computing (including cloud infrastructure)
+*	Collaborate with application/domain scientist to derive requirements and implement solutions
+*	Program in Python/C and related languages
+*	Deliver tested, documented and production grade software 
+*	Image Analysis Algorithms and Methods, including Machine-Learning techniques.
+
+A successful programmer will be expected to deliver working prototypes and write technical reports. Will be familiar with modern software engineering methodology and scientific computing. 
+
+The applicant must possess strong problem-solving skills, must have good organizational and communication skills and be able to work under minimal supervision. 
+
+Will have either a MS/BS in Computer Science/Engineering with 3-5 years post-degree experience, or a PhD in Computer Science/Engineering or closely related discipline.
+
+Will be based at Stony Brook University.
+
+Please contact either Heather Lynch (heather.lynch@stonybrook.edu) or Shantenu Jha (shantenu.jha@stonybrook.edu).
+
+Job application link [here](https://goo.gl/75B1B5)
+
+**Rutgers University**
+
+ICEBERG is a bold new project that will radically enhance high-performance computing and imagery enabled polar science.  ICEBERG aims to create the middleware and building blocks to support high-resolution imagery on high-performance platforms, including NSF XSEDE and diverse cloud platforms.
+
+The applicant will function as the senior research programmer for the ICEBERG project, and will be responsible for designing, prototyping and delivering production grade cyberinfrastructure for polar imagery processing workflows in high-performance and distributed computing. This includes developing libraries and building blocks for workflows.  The applicant will also be responsible for the successful integration with Polar science applications, and will require, collaboration with a junior research programmer, domain scientists and graduate students.  
+
+Experience with high-performance distributed computing and software engineering is necessary. Knowledge of Image analysis, GIS and Remote Sensing concepts is helpful, but not mandatory. 
+
+Primary responsibilities include but are not limited to:  
+
+* Design of complex software systems and staged delivery    
+* Requirements engineering including Use Case Analysis    
+*	Software engineering lifecycle management   
+*	Deliver software systems for high-performance and distributed computing (including cloud) infrastructure  
+*	Testing, integration and performance engineering on workflows on high-performance infrastructure  
+*	Collaboration with domain scientists to ensure integration and production capabilities  
+
+Must be independent and motivated to excel. Will be expected to deliver code, write papers and deliver talks. The applicant will be expected to travel to professional meetings and collaborators.
+
+The applicant will be familiar with modern software engineering methodology, high-performance computing, python and scientific computing. Will have either a MS in Computer Science/Engineering with 3+ years post-degree experience, or a PhD in Computer Science/Engineering or closely related discipline.
+
+The applicant will be based in the RADICAL Laboratory (http://radical.rutgers.edu) at Rutgers University, and will have access to facilities and resources of the Computational Science Initiative at Brookhaven National Laboratory as well as the IACS at Stony Brook University.
+
+For further information, please contact either Shantenu Jha (shantenu.jha@rutgers.edu) or Heather Lynch (heather.lynch@stonybrook.edu).
+
+Roles and Responsibilities:
+
+*	Analyze existing capabilities, requirements engineering and architecting ICEBERG framework (25% time)   
+*	Responsible for testing and deployment of the ICEBERG framework on HPC and cloud infrastructures (25%)  
+*	Integration of ICEBERG with SD (20%)   
+*	de novo software development (25%)  
+*	All members of the CI-team will contribute to training, workshop and hackathon activities (5%)
+
+Job application link [here](https://jobs.rutgers.edu/postings/51839)
