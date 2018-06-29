@@ -9,7 +9,7 @@ body{ /* Normal  */
 }
 </style>
 
-There are four major use cases that we will be developing initially for ICEBERG. More detailed information and code may be found at our [github site](https://github.com/iceberg-project/ICEBERG-science). 
+There are four major use cases that we will be developing initially for ICEBERG. More detailed information and code may be found at our [github site](https://github.com/iceberg-project). 
 
 Application #1: Polar glaciology and geomorphology using 4D change detection
 
