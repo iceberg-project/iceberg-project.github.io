@@ -9,6 +9,9 @@ body{ /* Normal  */
 }
 </style>
 
+We are currently recruiting a research programmer position. A description of the position is below. Prospective students, post-docs, and research programmers with an interest in combining satellite imagery and high performance computing should contact ICEBERG PI Heather Lynch (heather.lynch@stonybrook.edu) for more information.
+
+<!--
 We are currently recruiting two Ph.D. positions associated with ICEBERG, and two research programmer positions. Descriptions of each position are below. Prospective students, post-docs, and research programmers with an interest in combining satellite imagery and high performance computing should contact ICEBERG PI Heather Lynch (heather.lynch@stonybrook.edu) for more information.
 
 **Northern Arizona University**
@@ -47,6 +50,7 @@ Will be based at Stony Brook University.
 Please contact either Heather Lynch (heather.lynch@stonybrook.edu) or Shantenu Jha (shantenu.jha@stonybrook.edu).
 
 Job application link [here](https://goo.gl/75B1B5)
+-->
 
 **Rutgers University**
 
