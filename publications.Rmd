@@ -1,0 +1,13 @@
+---
+title: "Publications"
+---
+
+<style type="text/css">
+body{ /* Normal  */
+      font-size: 16px;
+  }
+}
+</style>
+
+
+[](EarthCube2018poster_imagery_redacted.pdf)
