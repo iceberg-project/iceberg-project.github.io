@@ -1,0 +1,13 @@
+---
+title: "Partners"
+---
+
+<style type="text/css">
+body{ /* Normal  */
+      font-size: 16px;
+  }
+}
+</style>
+
+There is a large community of polar scientists using satellite imagery in their research, and developing new algorithms to automate the use of satellite imagery for large-scale analyses of biological, geological, or hydrological processes. As the ICEBERG copmmunity grows, we'll link to members of the ICEBERG community here. For now, more information on the larger polar imagery community can be found at the Polar Geospatial Center's [website](https://www.pgc.umn.edu/).
+

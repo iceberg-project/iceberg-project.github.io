@@ -1,0 +1,23 @@
+name: "ICEBERG"
+output_dir: "."
+navbar:
+#  title: "ICEBERG"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      menu:
+        - text: "ICEBERG team"
+          href: about.html
+        - text: "ICEBERG partners"
+          href: partners.html
+    - text: "Projects"
+      href: ICEBERGscience.html
+    - text: "Opportunities"
+      href: opportunities.html
+
+output:
+  html_document:
+    theme: simplex
+    highlight: haddock
+
