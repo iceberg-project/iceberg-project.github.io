@@ -251,6 +251,10 @@ a.nav-link:hover{
 .colorDarkCyan {
     color: DarkCyan;
 }
+
+.cursorPointer {
+    cursor: pointer
+}
 /*****************************************************
     Background CSS Elements here
     Create new ones, do not change existing ones
