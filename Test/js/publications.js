@@ -7,7 +7,7 @@ var publication_info = [
 	},
 	{
 		"title"		: "Harnessing high performance computing for large-scale imagery-enabled polar research",
-		"url"		: "img/EarthCube2018poster_imagery_redacted.pptx",
+		"url"		: "img/EarthCube2018poster_imagery_redacted.png",
 		"authors"	: ["Heather J. Lynch" , "Shantenu Jha", "Bento Goncalves", "Bradley Spitzbart" , "Michael Willis", "Michael MacFerrin", " Vena Chu", "Mark Salvatore", "and Matteo Turilli"],
 		"source"	: "EarthCube All-Hands Meeting, Washington, D.C. June 6-8, 2018",
 		"timestamp"	: "06/06/2018"
