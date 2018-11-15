@@ -2,14 +2,8 @@ var publication_info = [
 	{
 		"title"		: "Monitoring pack-ice seals from space with deep learning.",
 		"authors"	: ["Goncalves, B.", "and H.J. Lynch"],
-		"source"	: "Using satellite imagery to study wildlife ecology in polar regions session at the Scientific Committee on Antarctic Research Biennial Meeting 2018",
-	},
-	{
-		"title"		: "Spatial aggregation reveals robust dynamics despite stochastic noise in pan-Antarctic analysis of Adélie penguin abundance",
-		"url"		: "https://www.nature.com/articles/s41467-017-00890-0",
-		"authors"	: ["Che-Castaldo, C.", "S. Jenouvrier", "C. Youngflesh", "K. Shoemaker", "G. Humphries", "P. McDowall", "L. Landrum", "M. Holland", "Y. Li", "R. Ji", "and H.J. Lynch"],
-		"source"	: "Nature Communicationsvolume 8, Article number: 832 (2017)",
-		"timestamp"	: "10/10/2017"
+		"source"	: "Organized Oral Session on Using satellite imagery to study wildlife ecology in polar regions. Scientific Committee on Antarctic Research Biennial Meeting 2018",
+		"timestamp"	: "11/15/2018"
 	}
 ];
 
