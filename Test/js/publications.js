@@ -1,10 +1,8 @@
 var publication_info = [
 	{
-		"title"		: "Black-swan events: Population crashes or temporary emigration?",
-		"url"		: "http://www.pnas.org/content/early/2017/10/11/1713621114.full",
-		"authors"	: ["Youngflesh, C.", "and H.J. Lynch"],
-		"source"	: "PNAS October 24, 2017 114 (43) E8953-E8954",
-		"timestamp"	: "10/12/2017"
+		"title"		: "Monitoring pack-ice seals from space with deep learning.",
+		"authors"	: ["Goncalves, B.", "and H.J. Lynch"],
+		"source"	: "Using satellite imagery to study wildlife ecology in polar regions session at the Scientific Committee on Antarctic Research Biennial Meeting 2018",
 	},
 	{
 		"title"		: "Spatial aggregation reveals robust dynamics despite stochastic noise in pan-Antarctic analysis of Adélie penguin abundance",
