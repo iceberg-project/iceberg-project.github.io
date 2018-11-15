@@ -2,8 +2,7 @@ var publication_info = [
 	{
 		"title"		: "Monitoring pack-ice seals from space with deep learning.",
 		"authors"	: ["Goncalves, B.", "and H.J. Lynch"],
-		"source"	: "Organized Oral Session on Using satellite imagery to study wildlife ecology in polar regions. Scientific Committee on Antarctic Research Biennial Meeting 2018",
-		"timestamp"	: "11/15/2018"
+		"source"	: "Using satellite imagery to study wildlife ecology in polar regions. Scientific Committee on Antarctic Research Biennial Meeting 2018",
 	},
 	{
 		"title"		: "Harnessing high performance computing for large-scale imagery-enabled polar research",
