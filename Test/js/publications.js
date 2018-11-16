@@ -21,9 +21,11 @@ var generate_html = function(publication_sequence) {
 		html_string += 		"<div class=\"col-12 col-md-12\" style=\"padding: 0px;\">";
 		html_string += 			"<div class=\"card-header\">";
 		html_string += 				"<h5>";
-		html_string += 					"<a class=\"text-primary\" href=\""+ publication_sequence[i]["url"] +"\" target=\"_blank\">";
+		if( publication_sequence[i]["url"] )
+			html_string += 					"<a class=\"text-primary\" href=\""+ publication_sequence[i]["url"] +"\" target=\"_blank\">";
 		html_string += 						publication_sequence[i]["title"];
-		html_string += 					"</a>";
+		if( publication_sequence[i]["url"] )
+			html_string += 					"</a>";
 		html_string += 				"</h5>";
 
 		html_string += 			"</div>";
