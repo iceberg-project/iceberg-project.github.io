@@ -51,36 +51,28 @@
 			<div class="container marginBottom-16 marginLeft-16">
 				<ul class="list-group">
 					<li class="">
-						<h5>
-							Heather Lynch
-							<span class="text-muted">, Principal Investigator, ICEBERG </span>
-						</h5>
+						<h5>Heather Lynch<span class="text-muted">, Principal Investigator, ICEBERG </span></h5>
 					</li>
+
 					<li class="">
-						<h5>
-							Brad Spitzbart
-							<span class="text-muted">, Research Programmer </span>
-						</h5>
+						<h5>Brad Spitzbart<span class="text-muted">, Research Programmer </span></h5>
 					</li>
-					<li class="">
+
+					<li class="peopleModal">
 						<h5>
-							<a data-target="#bentoModal" class="cursorPointer" data-toggle="modal">
-								<u>Bento Goncalves</u>
+							<a data-target="#peopleModal" class="cursorPointer" data-toggle="modal">
+								<u id="getModalName">Bento Goncalves</u>
 							</a>
 							<span class="text-muted">, Ph.D student, Ecology and Evolution - Seals Use Case</span>
 						</h5>
 					</li>
+
 					<li class="">
-						<h5>
-							Hieu Le
-							<span class="text-muted">, Ph.D student, Computer Science - Penguins Use Case</span>
-						</h5> 
+						<h5>Hieu Le<span class="text-muted">, Ph.D student, Computer Science - Penguins Use Case</span></h5> 
 					</li>
+
 					<li class=""> 
-						<h5>
-							Yogesh Agrawal
-							<span class="text-muted">, M.S. student, Computer Science - Web development </span>
-						</h5>
+						<h5>Yogesh Agrawal<span class="text-muted">, M.S. student, Computer Science - Web development </span></h5>
 					</li>
 				</ul>
 			</div>
@@ -126,26 +118,29 @@
 			<h4 class="text-success">University of California, Santa Barbara</h4>
 			<div class="container marginBottom-16 marginLeft-16">
 				<ul class="list-group">
-					<li class=""> 
+					<li class="peopleModal">
 						<h5>
-							<a data-target="#venaModal" class="cursorPointer" data-toggle="modal">
-								<u>Vena Chu</u>
-							</a><span class="text-muted"> , Principal Investigator, Rivers Use Case </span>
-						</h5> 
+							<a data-target="#peopleModal" class="cursorPointer" data-toggle="modal">
+								<u id="getModalName">Vena Chu</u>
+							</a>
+							<span class="text-muted">, Principal Investigator, Rivers Use Case </span>
+						</h5>
 					</li>
-					<li class=""> 
+					<li class="peopleModal">
 						<h5>
-							<a data-target="#samiraModal" class="cursorPointer" data-toggle="modal">
-								<u>Samira Daneshgar Asl</u>
-							</a><span class="text-muted">, Postdoc  </span>
-						</h5> 
+							<a data-target="#peopleModal" class="cursorPointer" data-toggle="modal">
+								<u id="getModalName">Samira Daneshgar Asl</u>
+							</a>
+							<span class="text-muted">, Postdoc  </span>
+						</h5>
 					</li>
-					<li class=""> 
+					<li class="peopleModal">
 						<h5>
-							<a data-target="#enboModal" class="cursorPointer" data-toggle="modal">
-								<u>Enbo Zhou</u>
-							</a><span class="text-muted">, Ph.D student - Geography  </span>
-						</h5> 
+							<a data-target="#peopleModal" class="cursorPointer" data-toggle="modal">
+								<u id="getModalName">Enbo Zhou</u>
+							</a>
+							<span class="text-muted">, Ph.D student - Geography</span>
+						</h5>
 					</li>
 				</ul>
 			</div>
@@ -164,15 +159,20 @@
 			</h4>
 			<div class="container marginBottom-16 marginLeft-16">
 				<ul class="list-group">
-					<li class=""> <h5>Mark Salvatore<span class="text-muted">, Principal Investigator, LandCover Use Case </span></h5> </li>
-					<li class=""> 
-						<h5>
-							<a data-target="#helenModal" class="cursorPointer" data-toggle="modal">
-								<u>Helen Eifert</u>
-							</a><span class="text-muted">, Ph.D student, Physics and Astronomy  </span>
-						</h5> 
+					<li class="">
+						<h5>Mark Salvatore<span class="text-muted">, Principal Investigator, LandCover Use Case </span></h5>
 					</li>
-					<li class=""> <h5>Brian Szutu<span class="text-muted">, Undergraduate programmer </span></h5> </li>
+					<li class="peopleModal">
+						<h5>
+							<a data-target="#peopleModal" class="cursorPointer" data-toggle="modal">
+								<u id="getModalName">Helen Eifert</u>
+							</a>
+							<span class="text-muted">, Ph.D student, Physics and Astronomy</span>
+						</h5>
+					</li>
+					<li class=""> 
+						<h5>Brian Szutu<span class="text-muted">, Undergraduate programmer </span></h5>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -181,157 +181,23 @@
 	</div>
 	<!-- Home Page ends -->
 
-
-	<!-- Modals for all people start here -->
-	<!-- value for "id" should be a unique value,
-		 and use the same in your "data-target"-->
-	<!-- create one modal for each person -->
-	<div id="bentoModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+	<!----------------------------------------------->
+	<!-- Modal structure for people starts here    -->
+	<!-- define details of the person in people.js -->
+	<!-- and create modal html as per given format -->
+	<!----------------------------------------------->
+	<div id="peopleModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Bento Goncalves, Ph.D student, Ecology and Evolution - Seals Use Case</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
 					<div class="container row">
-						<div class="col-8">
-							<img class="w-100p h-100p" src="img/Bento_Goncalves.png">
-						</div>
-						<div class="col-8">
-							Growing up in Southern Brazil, I received a bachelor’s degree in 
-							biology working on Central Amazon birds. As I matured as a researcher,
-							I gradually shifted my focus towards the quantitative end of Ecology 
-							and now I have Deep Learning as a central piece of my thesis work.
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="helenModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Helen Eifert,Ph.D student, Physics and Astronomy</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
 					<div class="container row">
-						<div class="col-8">
-							<img class="w-100p h-100p" src="img/helen.jpg">
-						</div>
-						<div class="col-8">
-							Helen Eifert is a first year PhD student in Dr. Mark Salvatore’s Planetary Exploration Lab in the 
-							Department of Physics and Astronomy at Northern Arizona University. She is assisting with 
-							the large-scale automation and image interpretation of landcover features in Antarctica for the ICEBERG project. 
-							She hopes to use this work as a foundation to investigate active surface processes on 
-							Mars via cold, dry Earth Analogs, including Antarctica. 
-							Helen has a Bs in Geology and Outdoor Studies from St. Lawrence University in Canton, 
-							NY where she studied various geomorphic 
-							subjects including lake sediments, reaction wood, and mass movements with a 
-							strong focus on field work.
-						</div>
+						<h5 id="nameModal" class="modal-title">Name inserted here from people.js</h5>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="enboModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Enbo Zhou, Ph.D student - Geography</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
 					<div class="container row">
-						<div class="col-8">
-							<img class="w-100p h-100p" src="img/Enbo.png">
-						</div>
-						<div class="col-8">
-							Enbo Zhou is the first year Ph.D. student at UC Santa Barbara geography department now. 
-							He previously received his M.S. in Cartography 
-							and GIS (2018), B.S. in GIS (2015) and B.E. in Economics (2015) from 
-							Peking University, China. His research interests focus on intelligent 
-							analysis for remote sensing imagery and its applications on Cyro-Hydrology, 
-							spatio-temporal big data analytics, spatial data mining and spatial optimization.
-						</div>
+						<h6 id="titleModal" class="modal-title">Title inserted here from people.js</h6>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-		
-	<div id="samiraModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Samira Daneshgar-Asl, Postdoc</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="container row">
-						<div class="col-8">
-							<img class="w-100p h-100p" src="img/Samira_Daneshgar-Asl.JPG">
-						</div>
-						<div class="col-8">
-							Samira Daneshgar-Asl is a Postdoctoral Scholar at the Department of 
-							Geography of UC Santa Barbara. She received her PhD in Oceanography 
-							from Florida State University in 2017, MS in Photogrammetry Engineering 
-							from K. N. Toosi University of Technology in 2010, and BS in Civil 
-							Engineering-Geomatics from SRTT University in 2007. Her research 
-							interests lie mainly in the areas of ocean and cryo-hydrologic remote 
-							sensing. She is experienced in satellite image processing, GIS, oil 
-							spill remote sensing (optical and SAR), and numerical modeling of oil 
-							slicks as a function of air-sea interaction. She is currently focusing 
-							on classifying supraglacial hydrological features on Arctic glaciers 
-							particularly the Greenland Ice Sheet utilizing high-resolution 
-							WorldView satellite imagery and Deep Learning techniques. 
-						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div id="venaModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Vena Chu, Principal Investigator, Rivers Use Case</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="container row">
-						<div class="col-8">
-							<img class="w-100p h-100p" src="img/Chu_Headshot.jpg">
-						</div>
-						<div class="col-8">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div id="person2Modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Name, Designation</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -339,17 +205,17 @@
 				<div class="modal-body">
 					<div class="container row">
 						<div class="col-4">
-							<img src="img/nau-logo.png">
+							<img id="imageModal" class="w-100p" src=""> <!-- Image inserted here from people.js -->
 						</div>
-						<div class="col-8">
-							Relevant text about the person here.
+						<div id="descriptionModal" class="col-8">
+							Description inserted here from people.js
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- Modals for all people end here -->
+	<!-- Modal structure for people ends here -->
 
 	<div id="footer"></div>
 
@@ -359,6 +225,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 	<script src="js/custom.js"></script>
+	<script src="js/people.js"></script>
 
 </body>
 <!-- body ends-->
