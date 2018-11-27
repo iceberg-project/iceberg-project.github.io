@@ -25,16 +25,63 @@
 
 	<!-- Home Page starts -->
 	<div class="container" id="body" hidden>
-
-		<!-- Introduction starts -->
-		<div class="container row marginTop-16 text-justify">
-			<p>There are four major use cases that we will be developing initially for ICEBERG. More detailed information and code may be found at our <a href="https://github.com/iceberg-project" target="_blank">github site</a>.</p>
-			<p>Application #1: Polar glaciology and geomorphology using 4D change detection</p> <br>
-			<p>Application #2: Arctic hydrology / more content to follow here /</p>
-			<p>Application #3: Biological feature detection / more content to follow here /</p>
-			<p>Application #4: Geological land cover classification</p>
+	<!-- heading starts -->
+		<div class="container row">
+			<h1 class="colorDarkBlue">Projects</h1>
 		</div>
-		<!-- Introduction ends -->
+		<!-- heading ends -->
+
+		<!-- Introductory starts -->
+		<div class="container row">
+			<p class="text-justify">There are four major use cases that we will be developing initially for ICEBERG, which collectively cover many possible applications in geosciences and biology. Additional use cases will be supported as feasible in Years 2 and 3, so if you have applications that involve high resolution satellite imagery in the polar areas, let us know! More detailed information and code may be found at our <a href="https://github.com/iceberg-project" target="_blank">github site</a>.</p>
+		</div>
+		<!-- Introductory ends -->
+		<hr/>
+		<div class="container row">
+			<h4 class="text-success">Polar glaciology and geomorphology using 4D change detection (ICEBERG-ASIFT)</h4>
+			<div class="container marginBottom-16 marginLeft-16">
+ASIFT (an Algorithm for Fully Affine Invariant Comparison) will provide the functionality for the user to take an airborne or satellite image anywhere that we have Worldview Ortho-rectified imagery available, and where the user knows the approximate location of the photo (within ~100 km) but does not have geo-location information on it. The ASIFT workflow be able to pin down where that photo was taken, automatically determine a likely set of geo-located ground control points for the image, and ortho-rectify the image if needed. 
+			</div>
+		</div>
+		<hr/>
+
+		<div class="container row">
+			<h4 class="text-success">Mapping hydrology (ICEBERG-Rivers)</h4>
+			<div class="container marginBottom-16 marginLeft-16">
+We provide a classification algorithm for ice surface features from high-resolution imagery.  This algorithm was developed by convolutional neural network training to detect regions of large and small rivers and to distinguish them from crevasses and non-channelized slush. We also provide a detection algorithm to extract polyline water features from the classified high-probability river areas.
+			</div>
+		</div>
+		<hr/>
+
+		<div class="container row">
+			<h4 class="text-success">Biological feature detection (ICEBERG-Seals/Penguins)</h4>
+			<div class="container marginBottom-16 marginLeft-16">
+Antarctic pack-ice seals, a group of four species of true seals (Phocidae), play a pivotal role in the Southern Ocean foodweb as wide-ranging Antarctic krill (Euphausia superba) predators. This project aims to automate pack-ice seal surveys using a combination of remote sensing, computer vision, seal ecology and HPC. Apart from being cheaper and safer when compared to aerial imagery, the scale at which we can survey pack-ice seals with remote sensing imagery will fill an important information gap in Antarctic ecology. This study also showcases the ever-growing benefits of incorporating AI into ecological sampling designs.
+We provide a detection algorithm to extract the location of seals from high-resolution
+imagery. This algorithm was developed by convolutional neural network training to
+detect and count seal haul-outs. This is beneficial, as a comprehensive pack-ice
+seal census and monitoring will provide key information on the health and evolution
+of the Southern Ocean ecosystem.
+<br /><br />
+We also provide a detection algorithm (ICEBERG-Penguins) to extract the location of penguin colonies from high-resolution
+imagery. This algorithm was developed by convolutional neural network training to
+detect the extent of guano patches indicating penguin colonies. This is beneficial, as a penguin colony census and monitoring will provide key information on the health and evolution
+of the Antarctic ecosystem.
+			</div>
+		</div>
+		<hr/>
+
+		<div class="container row">
+			<h4 class="text-success">Geological land cover classification (ICEBERG-LandCover)</h4>
+			<div class="container marginBottom-16 marginLeft-16">
+			ICEBERG-LandCover is a pipeline for automated processing of satellite imagery, automated
+detection and removal of snow, ice, water, and shadows from the scene, automated
+atmospheric characterization and removal, and automated “stretching'' of the
+scenes to provide spatial coverage of surveyed area, reasonable estimates on
+atmospheric contributions, and comparisons to a spectral library of known geologic
+materials.
+			</div>
+		</div>
 
 	</div>
 	<!-- Home Page ends -->
