@@ -2,9 +2,16 @@ var people = {
 	'Bento Goncalves' : {
 		'title': "Ph.D student, Ecology and Evolution - Seals Use Case",
 		'image': "img/Bento_Goncalves.png",
-		'description': `Growing up in Southern Brazil, I received a bachelor’s degree in  biology working on 
-						Central Amazon birds. As I matured as a researcher, I gradually shifted my focus towards 
-						the quantitative end of Ecology and now I have Deep Learning as a central piece of my thesis work.`
+		'description': `Growing up in Southern Brazil, I received a bachelor’s degree in  biology working on
+						Central Amazon birds. As I matured as a researcher, I gradually shifted my focus towards
+						the quantitative end of Ecology and now I have Deep Learning as a central piece of my thesis work.
+						<br/><br/>Seals project: Antarctic pack-ice seals, a group of four species of true seals (Phocidae),
+						play a pivotal role in the Southern Ocean foodweb as wide-ranging Antarctic krill (Euphausia
+						uperba) predators. This project aims to automate pack-ice seal surveys using a combination
+						of remote sensing, computer vision, seal ecology and HPC. Apart from being cheaper and safer
+						when compared to aerial imagery, the scale at which we can survey pack-ice seals with remote
+						sensing imagery will fill an important information gap in Antarctic ecology. This study also
+						showcases the ever-growing benefits of incorporating AI into ecological sampling designs.`
 	},
 	'Helen Eifert' : {
 		'title': "Ph.D student, Physics and Astronomy",
