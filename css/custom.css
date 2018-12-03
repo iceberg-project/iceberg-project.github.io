@@ -90,6 +90,14 @@
 	margin-right: 12px;
 }
 
+.marginRight-20 {
+    margin-right: 20px;
+}
+
+.marginRight-40 {
+    margin-right: 40px;
+}
+
 .marginTop-32 {
 	margin-top: 32px;
 }
@@ -223,7 +231,7 @@ footer {
 /* Remove the navbar's default rounded borders and increase the bottom margin */ 
 .navbar {
     border: None;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .gradientColor {
@@ -242,6 +250,10 @@ a.nav-link:hover{
 
 .nav-link.active {
     /*color: white;*/
+}
+
+.nav-item {
+    margin-right: 10px;
 }
 
 .colorDarkBlue {
@@ -292,6 +304,7 @@ a.nav-link:hover{
 ******************************************************/
 hr {
     border-top: 4px solid rgba(0,0,0,.1);
+    margin-top: 0px;
 }
 
 .text-justify{
