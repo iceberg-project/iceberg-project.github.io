@@ -55,7 +55,20 @@ var people = {
 	'Vena Chu' : {
 		'title': "Principal Investigator, Rivers Use Case",
 		'image': "img/Chu_Headshot.jpg",
-		'description': ``
+		'description': `I am an Assistant Professor at the UC Santa Barbara Department of Geography, 
+							and I am interested in Arctic climate change and impacts on hydrology, particularly 
+							for the Greenland ice sheet.  Currently, my work deals with understanding the spatial 
+							and temporal dynamics of the Greenland ice sheet hydrologic system from snow to sea 
+							using geospatial technologies and field techniques. My research has focused on meltwater 
+							input into the ice sheet (through supraglacial rivers and moulins) as well as meltwater 
+							export into the ocean (through proglacial rivers and fjord sediment plumes).  I was a recent
+							UC President's Postdoctoral Fellow at the UC Berkeley Department of Geography, and 
+							earned my Ph.D. from the UCLA Department of Geography.`
+	},
+	'Heather Lynch' : {
+		'title': "Principal Investigator, ICEBERG",
+		'image': "img/Lynch_Heather.jpg",
+		'description': ` `
 	},
 };
 
