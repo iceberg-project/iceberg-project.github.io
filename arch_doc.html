@@ -42,7 +42,7 @@
 		<!-- Introductory starts -->
 		<div class="container row">
 			<p class="text-justify">
-				We provide the description of our architecture in this section.
+				ICEBERG is a multi-disciplinary, cyberinfrastructure, integration project to (1) develop open source image classification tools tailored to high-resolution satellite imagery of the Arctic and Antarctic to be used on High Performance Distributed Computing (HPDC) resources, (2) create easy-to-use interfaces to facilitate the development and testing  of algorithms for application specific geoscience requirements, (3) apply these tools through use cases that span the biological, hydrological, and geoscience needs of the polar community, (4) transfer these tools to the larger (non-polar) EarthCube community for continued community-driven development.
 			</p>
 		</div>
 		<!-- Introductory ends -->
@@ -50,8 +50,68 @@
 		<hr/>
 
 		<div class="container row">
-			Main content here.
+			<h2 class="colorDarkBlue">Background</h2>
 		</div>
+		<!-- heading ends -->
+
+		<div class="container row">
+			<p class="text-justify">
+				ICEBERG utilizes the powerful middleware abstractions of
+				<a target="_blank" href="https://radicalpilot.readthedocs.io/en/latest">RADICAL-Pilot</a>
+				, a job pilot system written in Python. It allows a user to run large numbers of computational tasks concurrently on a multitude of different distributed resources, like HPC clusters and Clouds.
+			</p>
+		</div>
+
+		<div class="container">
+			<img src="img/RADICAL-Pilot.png">
+		</div>
+		<br/>
+		<hr/>
+
+		<div class="container row">
+			<h2 class="colorDarkBlue">Use Cases</h2>
+		</div>
+		<!-- heading ends -->
+
+		<div class="card marginBottom-32">
+			<div class="container row">
+				<p class="text-justify">
+					<b>SEALS</b> - The main functions of the Seals pipeline are tiling, detection, counting, and reporting the location of seals in a set of images.
+				</p>
+			</div>
+			<div class="container">
+				<img class="w-100" src="img/SealsExecutionArchitecture.jpg">
+			</div>
+		</div>
+
+		<div class="card marginBottom-32">
+			<div class="container row">
+				<p class="text-justify">
+					<b>ASIFT</b> - The main functions of the ASIFT pipeline are generating ground control points (GCPs), quality checks (RANSAC), geo-location, ortho-rectification, and producing output images.
+				</p>
+			</div>
+			<div class="container">
+				<img class="w-100" src="img/ASIFTWorkflowDiagram.jpg">
+			</div>
+		</div>
+
+		<div class="card marginBottom-32">
+			<div class="container row">
+				<p class="text-justify">
+					<b>LandCover</b> - The main functions of the LandCover pipeline consist of a series of algorithms to calibrate multispectral data from raw digital number through to spectral parameters derived from calibrated surface reflectance data.  Intermediate steps include the derivation of top-of-atmosphere radiance, the estimation of atmospheric contributions and their removal from the scene, the calibration to surface reflectance, the removal of "non-geological" surfaces (e.g., ice, snow, water, shadow), the parameterization of reflectance data, and the "spectral unmixing" of orbital data using a library of spectral endmembers.
+				</p>
+			</div>
+			<div class="container">
+				<b>A descriptive view of the pipeline -</b>
+				<img class="w-100" src="img/landcoverarch.png">
+				<b>A pipeline-stage-task schematic -</b>
+				<img class="w-100" src="img/landcover_pst_arch.png">
+			</div>
+		</div>
+
+		<br/>
+		<hr/>
+
 	</div>
 	
 	<!-- Home Page ends -->
