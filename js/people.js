@@ -1,4 +1,17 @@
 var people = {
+	'Brad Spitzbart' : {
+		'title': "Research Programmer",
+		'image': "img/Spitzbart.png",
+		'description': `Bradley Spitzbart joined Institute for Advanced Computational Science (IACS) at Stony Brook 
+                                                University in March, 2018 as a Research Programmer with Dr. Heather Lynch's 
+                                                NSF funded ICEBERG program. He works with domain scientists in geology, ecology,
+                                                and computer science to facilitate the open-source cyberinfrastructure necessary
+                                                for the processing and analysis of large om Valparaiso Uniscale satellite imagery
+                                                using machine learning and high performance computing resources.  Brad holds a 
+                                                BS in Mathematics from Valparaiso University and MS in the Physical Sciences 
+                                                from the University of Chicago.  Prior to Stony Brook, he spent 16 years on the 
+                                                Science Operations Team with NASA's Chandra X-ray Observatory in Cambridge, MA.`
+	},
 	'Bento Goncalves' : {
 		'title': "Ph.D student, Ecology and Evolution - Seals Use Case",
 		'image': "img/Bento_Goncalves.png",
