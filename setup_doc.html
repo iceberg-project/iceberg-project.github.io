@@ -23,6 +23,7 @@
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 	<link type="text/css" rel="stylesheet" href="css/custom.css" />
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
 </head>
 <!-- head ends-->
 
@@ -48,25 +49,92 @@
 		<!-- Introductory ends -->
 
 		<hr/>
-		<div>
-			<h3>Useful links</h3>
-			<div><a href="https://radicalpilot.readthedocs.io/en/latest/" target="_blank">RADICAL-Pilot</a></div>
-			<div><a href="https://www.xsede.org/" target="_blank">XSEDE</a></div>
-		</div>
-		<hr>
-		<div>
-			<h3>Deployment Notebooks</h3>
 
+		<div class="container row marginBottom-16">
+			<h3>Useful links</h3>
+			<div class="container row">
+				<a href="https://radicalpilot.readthedocs.io/en/latest/" target="_blank">RADICAL-Pilot</a>
+			</div>
+			<div class="container row">
+				<a href="https://www.xsede.org/" target="_blank">XSEDE</a>
+			</div>
+		</div>
+
+		<hr/>
+
+		<div class="container row marginBottom-16">
+			<h3>Deployment Notebooks</h3>
+			<p>This jupyter allows you to make predictions on your own images with the seal detection pipeline.</p>
+			<p> WARNING : CNNs used here were trained on panchromatic WorldView-3 imagery so results may not be satisfactory on different imagery / color bands.</p>
+
+			<h4>Load Packages</h4>
+			<div class="container row card bg-light marginBottom-16">
+				<!-- CODE STARTS: Dont give spaces/tabs before code lines -->
+				<pre><code class="python">
+import os
+				</code></pre>
+				<!-- CODE ENDS: Dont give spaces/tabs before code lines -->
+			</div>
+
+			<h4>Call detection pipeline</h4>
+			<p>Though you are free to try different combinations, the current setup of CNNs provides the best results on our test images.</p>
+			<div class="container row card bg-light marginBottom-16">
+				<!-- CODE STARTS: Dont give spaces/tabs before code lines -->
+				<pre><code class="python">
+# select classification CNN and hyperparameter set
+cls_arch = 'NasnetA'
+hyp_cls = 'E'
+t_dir = 'training_set_binary'
+if t_dir.split('_')[-1] == 'binary':
+	pos_classes = 'seal'
+else:
+	pos_classes = 'crabeater_weddell_pack-ice_ice-sheet_crack'
+
+# whether we want to skip classification
+skip = 1
+
+# select counting / detection CNN and hyperparameter set
+det_arch = 'UnetDet'
+hyp_cnt = 'B'
+
+# setup input folder ** change here **
+inp_fldr = './test_scenes'
+
+# setup output folder ** change here **
+out_fldr = 'sealnet_predictions_test'
+
+# loop through images
+inp_imgs = [img for img in os.listdir('{}'.format(inp_fldr)) if img[-4:] == '.tif']
+for img in inp_imgs:
+	img_path = '{}/{}'.format(inp_fldr, img)
+	# call pipeline 
+	!python predict_raster_det.py 	--input_image=$img_path \
+					--class_architecture=$cls_arch --det_architecture=$det_arch \
+					--hyperparameter_set_class=$hyp_cls --hyperparameter_set_count=$hyp_cnt \
+					--training_dir=$t_dir --dest_folder=$out_fldr \
+					--pos_classes=$pos_classes --skip_class=$skip
+				</code></pre>
+				<!-- CODE ENDS: Dont give spaces/tabs before code lines -->
+			</div>
+
+			<p>The output after running the above should look like this -</p>
+			<div class="container row card bg-light marginBottom-16">
+				<!-- CODE STARTS: Dont give spaces/tabs before code lines -->
+				<pre><code class="python">
+4536 tiles created in 0 minutes and 16.42 seconds
+Predicting with sealnet_predictions_test:
+Testing complete in 0.0h 2m 23s
+Total predicted in test.tif:  227
+				</code></pre>
+				<!-- CODE ENDS: Dont give spaces/tabs before code lines -->
+			</div>
+		</div>
 
 		<div class="container row">
-                  Seals iPython Notebook
-                  <iframe id="inlineFrameExample"
-                      title="Inline Frame Example"
-		      height="500"
-		      width="900"
-                      src="deploy_sealnet.html">
-                  </iframe>
-			
+			Seals iPython Notebook
+			<iframe id="inlineFrameExample" title="Inline Frame Example" height="1220" width="900" 
+					src="deploy_sealnet.html">
+			</iframe>
 		</div>
 	</div>
 	
@@ -79,6 +147,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
 	<script src="js/custom.js"></script>
 	<script src="js/news.js"></script>
 </body>
