@@ -1,7 +1,7 @@
 var people = {
 	'Brad Spitzbart' : {
 		'title': "Research Programmer",
-		'image': "img/Spitzbart.png",
+		'image': "img/Spitzbart.jpg",
 		'description': `Bradley Spitzbart joined Institute for Advanced Computational Science (IACS) at Stony Brook 
                                                 University in March, 2018 as a Research Programmer with Dr. Heather Lynch's 
                                                 NSF funded ICEBERG program. He works with domain scientists in geology, ecology,
