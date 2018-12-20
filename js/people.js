@@ -6,7 +6,7 @@ var people = {
                                                 University in March, 2018 as a Research Programmer with Dr. Heather Lynch's 
                                                 NSF funded ICEBERG program. He works with domain scientists in geology, ecology,
                                                 and computer science to facilitate the open-source cyberinfrastructure necessary
-                                                for the processing and analysis of large om Valparaiso Uniscale satellite imagery
+                                                for the processing and analysis of large on scale satellite imagery
                                                 using machine learning and high performance computing resources.  Brad holds a 
                                                 BS in Mathematics from Valparaiso University and MS in the Physical Sciences 
                                                 from the University of Chicago.  Prior to Stony Brook, he spent 16 years on the 
@@ -34,7 +34,7 @@ var people = {
 							the large-scale automation and image interpretation of landcover features in Antarctica for the ICEBERG project. 
 							She hopes to use this work as a foundation to investigate active surface processes on 
 							Mars via cold, dry Earth Analogs, including Antarctica. 
-							Helen has a Bs in Geology and Outdoor Studies from St. Lawrence University in Canton, 
+							Helen has a BS in Geology and Outdoor Studies from St. Lawrence University in Canton, 
 							NY where she studied various geomorphic 
 							subjects including lake sediments, reaction wood, and mass movements with a 
 							strong focus on field work.`
