@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head starts-->
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129453432-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'UA-129453432-1');
+	</script>
+	<!-- Title Displayed on Tab on Browser-->
+	<title>News - ICEBERG</title>
+	<link rel="shortcut icon" type="image/png" href="img/logo/iceberg.png"/>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/custom.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<!-- head ends-->
+
+<!-- body starts-->
+<body>
+
+	<div id="header_nav"></div>
+
+	<!-- Home Page starts -->
+	<div class="container" id="body" hidden>
+	<!-- heading starts -->
+		<div class="container row">
+			<h1 class="colorDarkBlue">What's New</h1>
+		</div>
+		<!-- heading ends -->
+
+		<!-- Introductory starts -->
+		<div class="container row">
+			<p class="text-justify">Check here for the latest ICEBERG news stories, conference appearances, and software updates.</p>
+		</div>
+		<!-- Introductory ends -->
+		<hr/>
+
+		<div id="newsRoll" class="container row">
+			<!-- content to be copied starts here -->
+			<div class="container row">
+				<h2 class="text-dark">AI for Earth Innovation Grant to supplement ICEBERG development</h2>
+			</div>
+			<div class="container row">
+				<p>
+					<span class="text-secondary">Posted on</span>
+					<span class="text-primary">January 18, 2019</span>
+					<span class="text-secondary">by</span>
+					<span class="text-primary">Brad Spitzbart</span>
+				</p>
+			</div>
+			<div class="container row">
+				<h2 class="text-dark"><a href="https://www.nationalgeographic.org/newsroom/eleven-changemakers-chosen-as-recipients-of-microsoft-and-national-geographic-ai-for-earth-innovation-grants/">
+				Eleven Changemakers Chosen as Recipients of Microsoft and National Geographic AI for Earth Innovation Grants</a>
+					<br /><br/>
+					<h4>Heather J. Lynch: Quantitative ecologist and associate professor jointly appointed in the Department of Ecology and Evolution 
+						and in the Institute for Advanced Computational Science at Stony Brook University in New York. 
+						Her AI for Earth Innovation Grant project will couple AI with 
+						predictive-population modeling for real-time tracking of Antarctic penguin populations using satellite imagery.<h4>
+			</div>
+			</div>
+			<!-- content to be copied ends here -->
+                        <hr/>
+			<!-- content to be copied starts here -->
+			<div class="container row">
+				<h2 class="text-dark">Penguins in the News!</h2>
+			</div>
+			<div class="container row">
+				<p>
+					<span class="text-secondary">Posted on</span>
+					<span class="text-primary">December 18, 2018</span>
+					<span class="text-secondary">by</span>
+					<span class="text-primary">Brad Spitzbart</span>
+				</p>
+			</div>
+			<div class="container row">
+				<h2 class="text-dark"><a href="https://www.smithsonianmag.com/smart-news/how-watching-poo-space-revealing-history-antarcticas-penguins-180971031/"> One NASA-funded team is using our eyes in the sky to study one of the most worldly and least 
+					mysterious objects: they&apos;re using satellites in space to monitor massive penguin poop stains</h2>
+				<h4> @SmithsonianMag </h4>
+			<div class="container row">
+				<img class="h-50p" src="img/news_penguin_hjl.jpg"></a>(Heather Lynch/Stony Brook University)
+			</div>
+			</div>
+			</div>
+			<!-- content to be copied ends here -->
+                        <hr/>
+			<!-- content to be copied starts here -->
+			<div class="container row">
+				<h2 class="text-dark">Check out ICEBERG at AGU!</h2>
+			</div>
+			<div class="container row">
+				<p>
+					<span class="text-secondary">Posted on</span>
+					<span class="text-primary">November 1, 2018</span>
+					<span class="text-secondary">by</span>
+					<span class="text-primary">Heather Lynch</span>
+				</p>
+			</div>
+			<div class="container row">
+				<img class="h-100p" src="img/agu2.png">
+			</div>
+			<div class="container row">
+				<p>
+					Samira Daneshgar Asl from UCSB will be giving a poster on Wednesday. <br/>
+					Abstract Title: High-Resolution Satellite Imagery Monitoring of Greenland Ice Sheet Supraglacial Hydrologic Features <br/>
+					Final Paper Number: C33D-2460 <br/>
+					Session Date and Time: <strong>Wednesday, 12 December 2018; 13:40 - 18:00 </strong> <br/>
+					Session Number and Title: C33D: <em>Glacier Monitoring from in Situ and Remotely Sensed Observations Posters </em> <br />
+					Location: Convention Center; Hall A-C (Poster Hall) <br/>
+				</p>
+				<p>
+					Mike MacFerrin and Mike Willis from UC Boulder will be giving a poster on Wednesday. <br />
+					Abstract Title: <em>Toward fully-automated geolocation of historic airborne imagery to construct an 80-year time series of Antarctic outlet glacier extents and volumes</em> <br />
+					Session Date and Time: <strong>Wednesday, 12 December 2018; 13:40 - 18:00 </strong><br />
+					Session Number and Title: C33D: Glacier Monitoring from in Situ and Remotely Sensed Observations Posters <br />
+					Location: Convention Center; Hall A-C (Poster Hall). <br/>
+					Digital scans of historic airborne and/or satellite photos have been used to successfully interpret past extents of glaciers and ice sheets over mountainous terrain (e.g. Kjeldsen et al., 2015; Kääb et al., 2018). The use of historic aerial photos allows modern researchers to look further into the past than is possible with contemporary satellite measurements alone. Large datasets containing many images require significant labor to accurately locate ground-control points in each image before further processing can be performed. A processing pipeline combining several modified algorithms from computer vision can automate image geo-location and ortho-rectification of otherwise poorly geolocated airborne images. Using an affine-, scale- and rotation-invariant image matching algorithm (Yu & Morel, 2011), distinct “keypoint” features are identified in historic airborne images and matched to similar keypoints found in modern WorldView imagery. A monte-carlo filtering algorithm selects a set of matching keypoints that maintain consistent image topology, allowing the automatic generation of geolocated ground control points without individual manual selection. Here we present preliminary results of this processing pipeline applied to the US Navy’s trimetrogon aerial photography campaign which collected more than 3,300 images over Antarctica during the 1930-50’s, in order to construct a glacial history of outlet glaciers covering much of West Antarctica’s peripheral regions. The algorithm is being developed as an open-source processing pipeline for public release to the research community, with initial results presented here.
+
+				</p>
+				Also at AGU, Heather Lynch from Stony Brook University will be presenting some of her work on remote sensing of penguinc colonies at an AGU press conference <strong>Tuesday, December 11 at 2 pm</strong> in the Marriot Marquis Room Shaw.
+			</div>
+			<div class="container row">
+				<img class="h-100p" src="img/agu1.png">
+			</div>
+			<!-- content to be copied ends here -->
+		</div>
+	</div>
+	
+	<!-- Home Page ends -->
+
+	<div id="footer"></div>
+
+	<!-- This should be at the end of the body tag -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/news.js"></script>
+</body>
+<!-- body ends-->
+
+</html>
