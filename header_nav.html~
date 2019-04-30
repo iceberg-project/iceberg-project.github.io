@@ -38,10 +38,12 @@
 						<a class="dropdown-item" href="srs_doc.html">SRS Docs</a>
 						<a class="dropdown-item" href="arch_doc.html">Architecture</a>
 						<a class="dropdown-item" href="perf_doc.html">Performance/Scaling</a>
+						<a class="dropdown-item" href="tiling_doc.html">Tiling</a>
 					</div>
 				</li>
 
 				<li class="nav-item">	<a class="nav-link" href="news.html">News</a>	</li>
+				<li class="nav-item">	<a class="nav-link" href="workshop.html">Users Workshop 2019</a>	</li>
 			</ul>
 		</div>
 		<!-- navbar menu items end here -->
