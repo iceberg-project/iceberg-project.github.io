@@ -1,5 +1,36 @@
 var publication_info = [
 	{
+		"title"		: "SealNet: A fully-automated pack-ice seal detection pipeline for sub-meter satellite imagery",
+		"authors"	: ["B.C. Goncalves", ", B. Spitzbart", ", H.J. Lynch"],
+		"source"	: "Remote Sensing of Environment, Volume 239, 15 March 2020, 111617",
+	},
+	{
+		"title"		: "Workflow Design Analysis for High Resolution Satellite Image Analysis",
+		"url"		: "https://arxiv.org/abs/1905.09766",
+		"authors"	: ["Ioannis Paraskevakos", ", Matteo Turilli", ", Bento Collares Goncalves", ", Heather J. Lynch", ", Shantenu Jha"],
+		"source"	: "arXiv:1905.09766, 29 Jan 2020",
+	},
+	{
+		"title"		: "Extracting Supraglacial Streams on Greenland Ice Sheet Using High-Resolution Satellite Imagery",
+		"authors"	: ["Samira Daneshgar Asl"],
+		"source"	: "AGU Fall Meeting, San Fransisco, CA, December 9-13, 2019",
+	},
+	{
+		"title"		: "Automating atmospheric removal from remote sensing data in Antarctica: Updates from the ICEBERG project",
+		"authors"	: ["Helen Eifert", ", Mark Salvatore", ", Heather Lynch", ", Bradley Spitzbart", ", Brian Szutu"],
+		"source"	: "EarthCube All-Hands Meeting, Denver, CO, June 12-14, 2019",
+	},
+	{
+		"title"		: "Scaling up analyses of high-resolution satellite imagery using ICEBERG: A demonstration involving pack-ice seal surveys",
+		"authors"	: ["Heather J. Lynch", ", Bento Goncalves", ", Bradley Spitzbart", ", Ioannis Paraskevakos", ", Matteo Turilli", ", Shantenu Jha"],
+		"source"	: "EarthCube All-Hands Meeting, Denver, CO, June 12-14, 2019",
+	},
+	{
+		"title"		: "Mapping Supraglacier Rivers on Greenland Ice Sheet with RiverNet.",
+		"authors"	: ["Enbo Zhou"],
+		"source"	: "American Association of Geographers annual meeting 2019",
+	},
+	{
 		"title"		: "Monitoring pack-ice seals from space with deep learning.",
 		"authors"	: ["Goncalves, B.", "and H.J. Lynch"],
 		"source"	: "Using satellite imagery to study wildlife ecology in polar regions. Scientific Committee on Antarctic Research Biennial Meeting 2018",
