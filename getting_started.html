@@ -97,9 +97,25 @@
 		<div>
 			<h3>Single image processing</h3>
 			  <h4>Penguins</h4>
-
+                            
 			  <h4>Seals</h4>
+			  - Download the <a href="https://github.com/iceberg-project/Seals/tree/master/models/Heatmap-Cnt/UnetCntWRN/UnetCntWRN_ts-vanilla.tar">
+				  pre-trained model</a>.  Experienced users can also train their own model.  Code is provided in the 
+			  <a href="https://github.com/iceberg-project/Seals">Seals GitHub Repository</a>, no packaged version is offered.
+			  <br \> <br \>
 
+			  Seals predicting is executed in two steps: <br />
+1) Create tiles from an input GeoTiff image and write to the output_folder. The scale_bands parameter (in pixels) depends on the trained model being used.  
+The default scale_bands is 224 for the pre-trained model downloaded above.  If you use your own model the scale_bands may be different.<br />
+From the command line and virtual environment used for the installation steps above, the tiling command is:<br />
+<br />
+[iceberg_seals] $ iceberg_seals.tiling --scale_bands=224 --input_image=<image_abspath> --output_folder=./test<br />
+where image_abspath is the path to the imagery you want to process.<br /><br />
+
+2) Detect seals on each tile and output counts and confidence for each tile.<br />
+<br />
+[iceberg_seals] $ iceberg_seals.predicting --input_image=<image_filename> --model_architecture=UnetCntWRN --hyperparameter_set=A --training_set=test_vanilla --test_folder=./test --model_path=./ --output_folder=./test_image
+<br /><br />
 			  <h4>Rivers</h4>
 			  Coming soon<br />
 
@@ -108,7 +124,11 @@
 	        </div>
 		<hr/>
 		<div>
-			<h3>Large-scale batch processing with the ICEBERG middleware</h3>
+			<h3>Large-scale batch processing with the ICEBERG Middleware</h3>
+			The ICEBERG Middleware transitions desktop image processing to large-scale processing on high performance computing (HPC) platforms. 
+			Specifically, the linear codes installed above that process one image at a time can be run concurrently in parallelized tasks that process many images at once on multi-core systems.<br />
+			Instructions for installation and execution can be found <a href="https://pypi.org/project/iceberg/">here</a>.<br/>
+			Detailed documentation and background can be found <a href="https://radicalpilot.readthedocs.io/en/stable/">here</a>.
 	        </div>
 		<hr/>
 
