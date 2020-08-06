@@ -43,7 +43,7 @@
 		<!-- Introductory starts -->
 		<div class="container row">
 			<p class="text-justify">
-			The ICEBERG project is focused on helping domain scientists make the most of high resolution satellite imagery. Most domain scientists don't have a lot of experience using high-performance computers or remote clusters, so here we offer a basic getting started guide.<br /><br />
+			The ICEBERG project is focused on helping domain scientists make the most of high resolution satellite imagery. Most domain scientists don't have a lot of experience using high-performance computers or remote clusters, so here we offer a basic getting started guide. If you are already familiar with running software on a high-performance cluster or are a software developer interested in extending the ICEBERG tools for new applications, this guide is not for you and you should go <a https://github.com/iceberg-project/ICEBERG-administration/wiki/Development-Guide-Documentation">here</a> instead.<br /><br />
 				All of the projects developed by the ICEBERG team to date involve the classification of features or the detection of specific objects in high-resolution imagery. Our land cover classification project involves the classification of geological features based on the reflectance properties of individual pixels, whereas
 				the other projects involve the use of computer vision models that take into account features at larger spacial scales as well. Either way, the goal is to take satellite imagery and extract useful information from it in an automated fashion that is easily scaled-up to cover very large areas of interest (far beyond what one could do without the aid of computers).<br /><br />
 				We've developed a set of models designed for specific science applications (finding penguins or seals or rivers, for example) as well as a more general set of tools that help deploy these models efficiently on a remote computing cluster, the latter of which we will refer to as "middleware".<br /><br />
@@ -53,56 +53,26 @@
 		<hr/>
 		<!-- Introductory ends -->
 
-		<div class="container row marginBottom-16">
-			<h3>Science Objectives</h3>
-			<!--<img width=500 src="img/iceberg_scheme.png">-->
-		</div>
-		<hr/>
 		<div>
-			<h3>System requirements and installation</h3>
-			Minimum system requirements are:<br />
+			<h3>System requirements and installation to run ICEBERG tools on your local desktop/laptop computer</h3>
+            Minimum system requirements for running the LandCover tools:<br />
                         <br />
-			Linux <br />
 			Python 3 <br />
 			CPU and NVIDIA GPU + CUDA CuDNN (the LandCover tools require only CPU)<br />
 			<br />
+			Minimum system requirements for running all the other ICEBERG models:<br />
+                        <br />
+			Linux <br />
+			Python 3 <br />
+			CPU and NVIDIA GPU + CUDA CuDNN <br />
+			<br />
 			All other dependancies will be installed with the software links below.
-			<ul>
-			  <li>Stand-alone tools (for processing one or two images with local resources)
-			  <ul>  
-				  <li><a href="https://pypi.org/project/iceberg-penguins.search/">Penguins</a></li>
-				  <li><a href="https://pypi.org/project/iceberg-seals.search/">Seals</a></li>
+			 <li><a href="https://pypi.org/project/iceberg-penguins.search/">Penguins</a></li>
+			<li><a href="https://pypi.org/project/iceberg-seals.search/">Seals</a></li>
 			  </ul>
 			  </li>
-			  <li><a href="https://gist.github.com/AymenFJA/0cff3debd784270962bc2cb66a2e8b2f">With middleware</a> (for processing large batches on remote High Performance Computing resources></li>
-			</ul>  
-		</div>
-		<hr/>
-		<div>
-			<h3>Input/Outputs</h3>
-			  <li>** insert matrix of CPUs/GPUs vs. runtimes **</li>
-		</div>
-		<hr/>
-		<div>
-			<h3>User development</h3>
-			<li>See our <a href="https://github.com/iceberg-project/ICEBERG-administration/wiki/Development-Guide-Documentation">GitHub Development Guide</a></li>
-		</div>
-		<hr/>
 
-		<div class="container row marginBottom-16">
-			<h3>Useful links</h3>
-			<div class="container row">
-				<a href="https://radicalpilot.readthedocs.io/en/latest/" target="_blank">RADICAL-Pilot</a>
-			</div>
-			<div class="container row">
-				<a href="https://www.xsede.org/" target="_blank">XSEDE</a>
-			</div>
-			<div class="container row">
-				<a href="https://github.com/iceberg-project/" target="_blank">ICEBERG github repository</a>
-			</div>
-		</div>
-	</div>
-	
+
 	<!-- Home Page ends -->
 
 	<div id="footer"></div>
