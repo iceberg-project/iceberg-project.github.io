@@ -43,11 +43,29 @@
 		<!-- Introductory starts -->
 		<div class="container row">
 			<p class="text-justify">
-			The ICEBERG project is focused on helping domain scientists make the most of high resolution satellite imagery. Most domain scientists don't have a lot of experience using high-performance computers or remote clusters, so here we offer a basic getting started guide. If you are already familiar with running software on a high-performance cluster or are a software developer interested in extending the ICEBERG tools for new applications, this guide is not for you and you should go <a https://github.com/iceberg-project/ICEBERG-administration/wiki/Development-Guide-Documentation">here</a> instead.<br /><br />
-				All of the projects developed by the ICEBERG team to date involve the classification of features or the detection of specific objects in high-resolution imagery. Our land cover classification project involves the classification of geological features based on the reflectance properties of individual pixels, whereas
-				the other projects involve the use of computer vision models that take into account features at larger spacial scales as well. Either way, the goal is to take satellite imagery and extract useful information from it in an automated fashion that is easily scaled-up to cover very large areas of interest (far beyond what one could do without the aid of computers).<br /><br />
-				We've developed a set of models designed for specific science applications (finding penguins or seals or rivers, for example) as well as a more general set of tools that help deploy these models efficiently on a remote computing cluster, the latter of which we will refer to as "middleware".<br /><br />
-				To get you started, we'll walk through an explanation as to how to run the models we've developed on your own computer (assuming you have the system requirements, see below) and then we'll walk you through the documentation for running this on a remote cluster.
+			The ICEBERG project is focused on helping domain scientists make the most of high resolution satellite imagery. 
+			Most domain scientists don't have a lot of experience using high-performance computers or remote clusters, 
+			so here we offer a basic getting started guide. If you are already familiar with running software on a 
+			high-performance cluster or are a software developer interested in extending the ICEBERG tools for new 
+			applications, this guide is not for you and you should go 
+			<a href="https://github.com/iceberg-project/ICEBERG-administration/wiki/Development-Guide-Documentation">here</a> instead.
+			<br /><br />
+			All of the projects developed by the ICEBERG team to date involve the classification of features or 
+			the detection of specific objects in high-resolution imagery. Our land cover classification project 
+			involves the classification of geological features based on the reflectance properties of individual pixels, 
+			whereas
+			the other projects involve the use of computer vision models that take into account features at larger 
+			spatial scales as well. Either way, the goal is to take satellite imagery and extract useful information 
+			from it in an automated fashion that is easily scaled-up to cover very large areas of interest 
+			(far beyond what one could do without the aid of computers).
+			<br /><br />
+			We've developed a set of models designed for specific science applications (finding penguins or 
+			seals or rivers, for example) as well as a more general set of tools that help deploy these models 
+			efficiently on a remote computing cluster, the latter of which we will refer to as "middleware".
+			<br /><br />
+			To get you started, we'll walk through an explanation as to how to run the models we've developed 
+			on your own computer (assuming you have the system requirements, see below) and then we'll walk you 
+			through the documentation for running this on a remote cluster.
 			</p>
 		</div>
 		<hr/>
@@ -55,10 +73,13 @@
 
 		<div>
 			<h3>System requirements and installation to run ICEBERG tools on your local desktop/laptop computer</h3>
+			Systems such as XSEDE Bridges are recommended, but other resources, such as a local cluster, desktop, or laptop, 
+			can be used if cuda, python3, and a NVIDIA P100 GPU are present.  Start-up allocations are readily available 
+			on XSEDE, apply <a href="https://portal.xsede.org/allocations/startup">here</a><br /><br />
             Minimum system requirements for running the LandCover tools:<br />
                         <br />
 			Python 3 <br />
-			CPU and NVIDIA GPU + CUDA CuDNN (the LandCover tools require only CPU)<br />
+			One or more CPUs<br />
 			<br />
 			Minimum system requirements for running all the other ICEBERG models:<br />
                         <br />
@@ -67,10 +88,29 @@
 			CPU and NVIDIA GPU + CUDA CuDNN <br />
 			<br />
 			All other dependancies will be installed with the software links below.
-			 <li><a href="https://pypi.org/project/iceberg-penguins.search/">Penguins</a></li>
-			<li><a href="https://pypi.org/project/iceberg-seals.search/">Seals</a></li>
-			  </ul>
-			  </li>
+			<ul>
+			  <li><a href="https://pypi.org/project/iceberg-penguins.search/">Penguins</a></li>
+			  <li><a href="https://pypi.org/project/iceberg-seals.search/">Seals</a></li>
+		        </ul>
+		</div>
+		<hr/>
+		<div>
+			<h3>Single image processing</h3>
+			  <h4>Penguins</h4>
+
+			  <h4>Seals</h4>
+
+			  <h4>Rivers</h4>
+			  Coming soon<br />
+
+			  <h4>LandCover</h4>
+			  Coming soon<br />
+	        </div>
+		<hr/>
+		<div>
+			<h3>Large-scale batch processing with the ICEBERG middleware</h3>
+	        </div>
+		<hr/>
 
 
 	<!-- Home Page ends -->
