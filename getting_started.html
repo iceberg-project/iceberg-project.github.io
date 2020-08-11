@@ -72,26 +72,60 @@
 		<!-- Introductory ends -->
 
 		<div>
-			<h3>System requirements and installation to run ICEBERG tools on your local desktop/laptop computer</h3>
+			<h3>System requirements to run ICEBERG tools on your local desktop/laptop computer</h3>
 			Systems such as XSEDE Bridges are recommended, but other resources, such as a local cluster, desktop, or laptop, 
 			can be used if cuda, python3, and a NVIDIA P100 GPU are present.  Start-up allocations are readily available 
 			on XSEDE, apply <a href="https://portal.xsede.org/allocations/startup">here</a><br /><br />
             Minimum system requirements for running the LandCover tools:<br />
                         <br />
 			Python 3 <br />
-			One or more CPUs<br />
 			<br />
 			Minimum system requirements for running all the other ICEBERG models:<br />
                         <br />
-			Linux <br />
 			Python 3 <br />
-			CPU and NVIDIA GPU + CUDA CuDNN <br />
+			CPU and GPU (tested with NVIDIA P100) + CUDA CuDNN <br />
 			<br />
 			All other dependancies will be installed with the software links below.
 			<ul>
 			  <li><a href="https://pypi.org/project/iceberg-penguins.search/">Penguins</a></li>
 			  <li><a href="https://pypi.org/project/iceberg-seals.search/">Seals</a></li>
 		        </ul>
+		</div>
+		<hr/>
+		<div>
+			<h3>Setup and installation</h3>
+			<p>These instructions are specific to XSEDE Bridges but other resources can be used if cuda, python3, 
+			and a NVIDIA P100 GPU are present, in which case 'module load' instructions can be skipped, which are specific to Bridges.
+			<br /><br />
+			<u>For Unix or Mac Users:</u>
+                        Login to bridges via ssh using a Unix or Mac command line terminal. Login is available to bridges directly or through 
+			the XSEDE portal. Please see the <a href="https://portal.xsede.org/psc-bridges">Bridges User's Guide</a>.
+			<br /><br />
+			<u>For Windows Users:</u>
+                        Many tools are available for ssh access to bridges. Please see Ubuntu, MobaXterm or PuTTY
+			<br /><br />
+			The lines below following a '$' are commands to enter (or cut and paste) into your terminal (note that all commands are 
+			case-sensitive, meaning capital and lowercase letters are differentiated.) Everything following '#' are comments to 
+			explain the reason for the command and should not be included in what you enter. Lines that do not start with '$' 
+			or '[my_env] $' are output you should expect to see.
+			<pre>
+                          <code>
+$ pwd
+/home/username
+$ cd $SCRATCH                      # switch to your working space.
+$ mkdir ICEBERG                    # create a directory to work in.
+$ cd ICEBERG                       # move into your working directory.
+$ module load cuda                 # load parallel computing architecture.
+$ module load python3              # load correct python version.
+$ virtualenv my_env             # create a virtual environment to isolate your work from the default system.
+$ source my_env/bin/activate    # activate your environment. Notice the command line prompt changes to show your environment on the next line.
+[my_env] $ pwd
+/pylon5/group/username/ICEBERG
+[my_env] $ export PYTHONPATH=<path>/my_env/lib/python3.5/site-packages # set a system variable to point python to your specific code. (Replace <path> with the results of pwd command above.
+[my_env] $ pip install iceberg_seals.search # pip is a python tool to extract the requested software (iceberg_seals.search in this case) from a repository. (this may take several minutes).
+                          </code>
+                        </pre>
+
 		</div>
 		<hr/>
 		<div>
