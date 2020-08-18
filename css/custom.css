@@ -668,3 +668,11 @@ line{
     -ms-filter: alpha(opacity=60);
     filter: alpha(opacity=60);
 }
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  padding: 5px;
+}
+

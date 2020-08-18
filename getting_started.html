@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head starts-->
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129453432-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'UA-129453432-1');
+	</script>
+	<!-- Title Displayed on Tab on Browser-->
+	<title>Getting Started Guide - ICEBERG</title>
+	<link rel="shortcut icon" type="image/png" href="img/logo/iceberg.png"/>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="css/custom.css" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/default.min.css">
+</head>
+<!-- head ends-->
+
+<!-- body starts-->
+<body>
+
+	<div id="header_nav"></div>
+
+	<!-- Home Page starts -->
+	<div class="container" id="body" hidden>
+	<!-- heading starts -->
+		<div class="container row">
+			<h2 class="colorDarkBlue">Getting Started</h2>
+		</div>
+		<!-- heading ends -->
+
+		<!-- Introductory starts -->
+		<div class="container row">
+			<p class="text-justify">
+			The ICEBERG project is focused on helping domain scientists make the most of high resolution satellite imagery. 
+			Most domain scientists don't have a lot of experience using high-performance computers or remote clusters, 
+			so here we offer a basic getting started guide. If you are already familiar with running software on a 
+			high-performance cluster or are a software developer interested in extending the ICEBERG tools for new 
+			applications, this guide is not for you and you should go 
+			<a href="https://github.com/iceberg-project/ICEBERG-administration/wiki/Development-Guide-Documentation">here</a> instead.
+			<br /><br />
+			All of the projects developed by the ICEBERG team to date involve the classification of features or 
+			the detection of specific objects in high-resolution imagery. Our land cover classification project 
+			involves the classification of geological features based on the reflectance properties of individual pixels, 
+			whereas
+			the other projects involve the use of computer vision models that take into account features at larger 
+			spatial scales as well. Either way, the goal is to take satellite imagery and extract useful information 
+			from it in an automated fashion that is easily scaled-up to cover very large areas of interest 
+			(far beyond what one could do without the aid of computers).
+			<br /><br />
+			We've developed a set of models designed for specific science applications (finding penguins or 
+			seals or rivers, for example) as well as a more general set of tools that help deploy these models 
+			efficiently on a remote computing cluster, the latter of which we will refer to as "middleware".
+			<br /><br />
+			To get you started, we'll walk through an explanation as to how to run the models we've developed 
+			on your own computer (assuming you have the system requirements, see below) and then we'll walk you 
+			through the documentation for running this on a remote cluster.
+			</p>
+		</div>
+		<hr/>
+		<!-- Introductory ends -->
+
+		<div>
+			<h3>System requirements to run ICEBERG tools on your local desktop/laptop computer</h3>
+			Systems such as XSEDE Bridges are recommended, but other resources, such as a local cluster, desktop, or laptop, 
+			can be used if cuda, python3, and a NVIDIA P100 GPU are present.  Start-up allocations are readily available 
+			on XSEDE, apply <a href="https://portal.xsede.org/allocations/startup">here</a><br /><br />
+            Minimum system requirements for running the LandCover tools:<br />
+                        <br />
+			Python 3 <br />
+			<br />
+			Minimum system requirements for running all the other ICEBERG models:<br />
+                        <br />
+			Python 3 <br />
+			CPU and GPU (tested with NVIDIA P100) + CUDA CuDNN <br />
+			<br />
+			All other dependancies will be installed with the software links below.
+			<ul>
+			  <li><a href="https://pypi.org/project/iceberg-penguins.search/">Penguins</a></li>
+			  <li><a href="https://pypi.org/project/iceberg-seals.search/">Seals</a></li>
+			  <li><a href="https://pypi.org/project/iceberg-rivers.search/">Rivers</a></li>
+		        </ul>
+		</div>
+		<hr/>
+		<div>
+			<h3>Setup and installation</h3>
+			<p>These instructions are specific to XSEDE Bridges but other resources can be used if cuda, python3, gdal (Rivers only)
+			and a NVIDIA P100 GPU are present (the LandCover project requires only python3), in which case 'module load' instructions 
+			can be skipped, which are specific to Bridges.
+			<br /><br />
+			<u>For Unix or Mac Users:</u>
+                        Login to bridges via ssh using a Unix or Mac command line terminal. Login is available to bridges directly or through 
+			the XSEDE portal. Please see the <a href="https://portal.xsede.org/psc-bridges">Bridges User's Guide</a>.
+			<br /><br />
+			<u>For Windows Users:</u>
+                        Many tools are available for ssh access to bridges. Please see Ubuntu, MobaXterm or PuTTY
+			<br /><br />
+			The lines below following a '$' are commands to enter (or cut and paste) into your terminal (note that all commands are 
+			case-sensitive, meaning capital and lowercase letters are differentiated.) Everything following '#' are comments to 
+			explain the reason for the command and should not be included in what you enter. Lines that do not start with '$' 
+			or '[my_env] $' are output you should expect to see.
+			<pre>
+                          <code>
+$ pwd
+/home/username
+$ cd $SCRATCH                      # switch to your working space.
+$ mkdir ICEBERG                    # create a directory to work in.
+$ cd ICEBERG                       # move into your working directory.
+$ module load cuda                 # load parallel computing architecture.
+$ module load python3              # load correct python version.
+$ module load gdal/2.2.1           # load gdal (for the Rivers pipeline only, it is not needed for the other pipelines).
+$ virtualenv my_env             # create a virtual environment to isolate your work from the default system.  This can be called anything you like that describes your work.
+$ source my_env/bin/activate    # activate your environment. Notice the command line prompt changes to show your environment on the next line.
+[my_env] $ pwd
+/pylon5/group/username/ICEBERG
+[my_env] $ export PYTHONPATH=<path>/my_env/lib/python3.5/site-packages # set a system variable to point python to your specific code. (Replace <path> with the results of pwd command above).
+[my_env] $ pip install iceberg_seals.search # pip is a python tool to extract the requested software (iceberg_seals.search in this case) from a repository. (this may take several minutes).
+                          </code>
+                        </pre>
+
+		</div>
+		<hr/>
+		<div>
+			<h3>Getting ready for processing</h3>
+			  <h4>These instructions apply to bridges and may not apply if you are using other resources.</h4>
+			  You will start a new session using the ssh steps above, then execute the following commands:
+			<pre>
+                          <code>
+$ interact -p GPU-small --gres=gpu:p100:1 -t 00:30:00 # request a compute node for 30 minutes.  This package has been tested on P100 GPUs on bridges, 
+                                             but that does not exclude any other resource that offers the same GPUs. 
+					     (this may take a minute or two or more to receive an allocation).
+					     Click <a href="https://www.psc.edu/bridges/user-guide/running-jobs#interact" target=_blank>here</a> for more details on the interact command.  
+					     For a single node, 30 minutes per image is recommended.
+$ cd $SCRATCH                      # switch to your working space.
+$ cd ICEBERG                       # move into your environment directory.
+$ module load cuda                 # load parallel computing architecture.
+$ module load python3              # load correct python version.
+$ module load gdal/2.2.1           # load gdal (for the Rivers pipeline only, it is not needed for the other pipelines).
+$ source my_env/bin/activate    # activate the environment you created earlier. Notice the command line prompt changes to show your environment on the next line.
+[my_env] $ pwd
+/pylon5/group/username/ICEBERG
+[my_env] $ export PYTHONPATH=<path>/my_env/lib/python3.5/site-packages # set a system variable to point python to your specific code. (Replace <path> with the results of pwd command above).
+[my_env] $ mkdir ICEBERG_run    # this can be called anything you like that describes your work.  It is where your input imagery is located and where output will be written.
+[my_env] $ cd ICEBERG_run
+                          </code>
+                        </pre>
+			You are now ready to process imagery with the instructions below!
+		</div>
+		<hr/>
+		<div>
+			<h3>Single image processing</h3>
+			  <h4>Penguins</h4>
+			  Coming soon
+			  <br \> <br \>
+                            
+			  <h4>Seals</h4>
+			  - Download the <a href="https://github.com/iceberg-project/Seals/tree/master/models/Heatmap-Cnt/UnetCntWRN/UnetCntWRN_ts-vanilla.tar">
+				  pre-trained model</a>.  Experienced users can also train their own model.  Code is provided in the 
+			  <a href="https://github.com/iceberg-project/Seals">Seals GitHub Repository</a>, no packaged version is offered.
+			  <br \> <br \>
+
+			  Seals predicting is executed in two steps: <br />
+1) Create tiles from an input GeoTiff image and write to the output_folder. The scale_bands parameter (in pixels) depends on the trained model being used.  
+The default scale_bands is 224 for the pre-trained model downloaded above.  If you use your own model the scale_bands may be different.<br />
+From the command line and virtual environment used for the installation steps above, the tiling command is:
+			<pre>
+                          <code>
+[iceberg_seals] $ iceberg_seals.tiling --scale_bands=224 --input_image=<image_abspath> --output_folder=./test
+                          </code>
+                        </pre>
+where image_abspath is the path to the imagery you want to process.<br /><br />
+
+2) Detect seals on each tile and output counts and confidence for each tile.
+			<pre>
+                          <code>
+[iceberg_seals] $ iceberg_seals.predicting --input_image=<image_filename> --model_architecture=UnetCntWRN --hyperparameter_set=A --training_set=test_vanilla --test_folder=./test --model_path=./ --output_folder=./test_image
+                          </code>
+                        </pre>
+			  <h4>Rivers</h4>
+			  - Download a pre-trained model at: Pending - a default model will be released in Oct 2020<br />
+
+                          You can download to your local machine and use scp, ftp, rsync, or Globus to [transfer to bridges](https://portal.xsede.org/psc-bridges).
+
+			  <br \> <br \>
+                          Rivers predicting is executed in three steps: 
+			  1) Create tiles from an input GeoTiff image and write to the output_folder. The scale_bands parameter (in pixels) depends on the trained model being used.  The default scale_bands is 224 for the pre-trained model downloaded above.  If you use your own model the scale_bands may be different.<br />
+From the command line and virtual environment used for the installation steps above, the tiling command is:
+			<pre>
+                          <code>
+[iceberg_rivers] $ iceberg_rivers.tiling --scale_bands=224 --input_image=image_abspath --output_folder=./test
+                          </code>
+                        </pre>
+			2) Then, detect rivers on each tile and output counts and confidence for each tile.
+			<pre>
+                          <code>
+[iceberg_rivers] $ iceberg_rivers.predicting --input_image=image_filename --model_architecture=UnetCntWRN --hyperparameter_set=A --training_set=test_vanilla --test_folder=./test --model_path=./ --output_folder=./test_image
+                          </code>
+                        </pre>
+                        3) Finally, mosaic all the tiles back into one image.
+			<pre>
+                          <code>
+[iceberg_rivers] $ iceberg_rivers.mosaic --input_WV image --input masks_folder --tile_size 224 --step 112 --output_folder ./mosaic
+                          </code>
+                        </pre>
+			Where 'image' is the original input image and 'mask_folder' is the folder containing the predicting output.<br />
+
+			  <h4>LandCover</h4>
+			  Coming soon<br />
+	        </div>
+		<hr/>
+		<div>
+			<h3>Large-scale batch processing with the ICEBERG Middleware</h3>
+			The ICEBERG Middleware transitions desktop image processing to large-scale processing on high performance computing (HPC) platforms. 
+			Specifically, the linear codes installed above that process one image at a time can be run concurrently in parallelized tasks that process many images at once on multi-core systems.<br />
+			Instructions for installation and execution can be found <a href="https://pypi.org/project/iceberg/">here</a>.<br/>
+			Detailed documentation and background can be found <a href="https://radicalpilot.readthedocs.io/en/stable/">here</a>.
+	        </div>
+		<hr/>
+
+	</div>
+
+	<!-- Home Page ends -->
+
+	<div id="footer"></div>
+
+	<!-- This should be at the end of the body tag -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/news.js"></script>
+</body>
+<!-- body ends-->
+
+</html>
