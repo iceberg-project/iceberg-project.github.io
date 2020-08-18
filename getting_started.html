@@ -95,8 +95,9 @@
 		<hr/>
 		<div>
 			<h3>Setup and installation</h3>
-			<p>These instructions are specific to XSEDE Bridges but other resources can be used if cuda, python3, 
-			and a NVIDIA P100 GPU are present, in which case 'module load' instructions can be skipped, which are specific to Bridges.
+			<p>These instructions are specific to XSEDE Bridges but other resources can be used if cuda, python3, gdal (Rivers only)
+			and a NVIDIA P100 GPU are present (the LandCover project requires only python3), in which case 'module load' instructions 
+			can be skipped, which are specific to Bridges.
 			<br /><br />
 			<u>For Unix or Mac Users:</u>
                         Login to bridges via ssh using a Unix or Mac command line terminal. Login is available to bridges directly or through 
@@ -118,15 +119,43 @@ $ mkdir ICEBERG                    # create a directory to work in.
 $ cd ICEBERG                       # move into your working directory.
 $ module load cuda                 # load parallel computing architecture.
 $ module load python3              # load correct python version.
-$ virtualenv my_env             # create a virtual environment to isolate your work from the default system.
+$ module load gdal/2.2.1           # load gdal (for the Rivers pipeline only, it is not needed for the other pipelines).
+$ virtualenv my_env             # create a virtual environment to isolate your work from the default system.  This can be called anything you like that describes your work.
 $ source my_env/bin/activate    # activate your environment. Notice the command line prompt changes to show your environment on the next line.
 [my_env] $ pwd
 /pylon5/group/username/ICEBERG
-[my_env] $ export PYTHONPATH=<path>/my_env/lib/python3.5/site-packages # set a system variable to point python to your specific code. (Replace <path> with the results of pwd command above.
+[my_env] $ export PYTHONPATH=<path>/my_env/lib/python3.5/site-packages # set a system variable to point python to your specific code. (Replace <path> with the results of pwd command above).
 [my_env] $ pip install iceberg_seals.search # pip is a python tool to extract the requested software (iceberg_seals.search in this case) from a repository. (this may take several minutes).
                           </code>
                         </pre>
 
+		</div>
+		<hr/>
+		<div>
+			<h3>Getting ready for processing</h3>
+			  <h4>These instructions apply to bridges and may not apply if you are using other resources.</h4>
+			  You will start a new session using the ssh steps above, then execute the following commands:
+			<pre>
+                          <code>
+$ interact -p GPU-small --gres=gpu:p100:1 -t 00:30:00 # request a compute node for 30 minutes.  This package has been tested on P100 GPUs on bridges, 
+                                             but that does not exclude any other resource that offers the same GPUs. 
+					     (this may take a minute or two or more to receive an allocation).
+					     Click <a href="https://www.psc.edu/bridges/user-guide/running-jobs#interact" target=_blank>here</a> for more details on the interact command.  
+					     For a single node, 30 minutes per image is recommended.
+$ cd $SCRATCH                      # switch to your working space.
+$ cd ICEBERG                       # move into your environment directory.
+$ module load cuda                 # load parallel computing architecture.
+$ module load python3              # load correct python version.
+$ module load gdal/2.2.1           # load gdal (for the Rivers pipeline only, it is not needed for the other pipelines).
+$ source my_env/bin/activate    # activate the environment you created earlier. Notice the command line prompt changes to show your environment on the next line.
+[my_env] $ pwd
+/pylon5/group/username/ICEBERG
+[my_env] $ export PYTHONPATH=<path>/my_env/lib/python3.5/site-packages # set a system variable to point python to your specific code. (Replace <path> with the results of pwd command above).
+[my_env] $ mkdir ICEBERG_run    # this can be called anything you like that describes your work.  It is where your input imagery is located and where output will be written.
+[my_env] $ cd ICEBERG_run
+                          </code>
+                        </pre>
+			You are now ready to process imagery with the instructions below!
 		</div>
 		<hr/>
 		<div>
@@ -159,7 +188,7 @@ where image_abspath is the path to the imagery you want to process.<br /><br />
                           </code>
                         </pre>
 			  <h4>Rivers</h4>
-			  - Download a pre-trained model at: <br />
+			  - Download a pre-trained model at: Pending - a default model will be released in Oct 2020<br />
 
                           You can download to your local machine and use scp, ftp, rsync, or Globus to [transfer to bridges](https://portal.xsede.org/psc-bridges).
 
