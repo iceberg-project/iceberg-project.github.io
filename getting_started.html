@@ -90,6 +90,7 @@
 			  <li><a href="https://pypi.org/project/iceberg-penguins.search/">Penguins</a></li>
 			  <li><a href="https://pypi.org/project/iceberg-seals.search/">Seals</a></li>
 			  <li><a href="https://pypi.org/project/iceberg-rivers.search/">Rivers</a></li>
+			  <li>LandCover - coming in fall 2020.</li>
 		        </ul>
 		</div>
 		<hr/>
@@ -144,7 +145,7 @@ $ interact -p GPU-small --gres=gpu:p100:1 -t 00:30:00 # request a compute node f
 					     For a single node, 30 minutes per image is recommended.
 $ cd $SCRATCH                      # switch to your working space.
 $ cd ICEBERG                       # move into your environment directory.
-$ module load cuda                 # load parallel computing architecture.
+$ module load cuda                 # load parallel computing architecture (this is not needed for the LandCover pipeline).
 $ module load python3              # load correct python version.
 $ module load gdal/2.2.1           # load gdal (for the Rivers pipeline only, it is not needed for the other pipelines).
 $ source my_env/bin/activate    # activate the environment you created earlier. Notice the command line prompt changes to show your environment on the next line.
@@ -179,7 +180,7 @@ From the command line and virtual environment used for the installation steps ab
 [iceberg_seals] $ iceberg_seals.tiling --scale_bands=224 --input_image=<image_abspath> --output_folder=./test
                           </code>
                         </pre>
-where image_abspath is the path to the imagery you want to process.<br /><br />
+			<i>Where image_abspath is the path to the imagery you want to process.</i><br /><br />
 
 2) Detect seals on each tile and output counts and confidence for each tile.
 			<pre>
@@ -193,7 +194,7 @@ where image_abspath is the path to the imagery you want to process.<br /><br />
                           You can download to your local machine and use scp, ftp, rsync, or Globus to [transfer to bridges](https://portal.xsede.org/psc-bridges).
 
 			  <br \> <br \>
-                          Rivers predicting is executed in three steps: 
+			  Rivers predicting is executed in three steps: <br />
 			  1) Create tiles from an input GeoTiff image and write to the output_folder. The scale_bands parameter (in pixels) depends on the trained model being used.  The default scale_bands is 224 for the pre-trained model downloaded above.  If you use your own model the scale_bands may be different.<br />
 From the command line and virtual environment used for the installation steps above, the tiling command is:
 			<pre>
@@ -213,10 +214,48 @@ From the command line and virtual environment used for the installation steps ab
 [iceberg_rivers] $ iceberg_rivers.mosaic --input_WV image --input masks_folder --tile_size 224 --step 112 --output_folder ./mosaic
                           </code>
                         </pre>
-			Where 'image' is the original input image and 'mask_folder' is the folder containing the predicting output.<br />
+			<i>Where 'image' is the original input image and 'mask_folder' is the folder containing the predicting output.</i><br />
+			  <br \> <br \>
 
 			  <h4>LandCover</h4>
-			  Coming soon<br />
+			  - There is a pre-processed library of landcover classification shapefiles: Pending - a default library will be released in late 2020<br />
+			  - Here is the map of regions available: Pending - the pre-processed map will be released in late 2020<br />
+
+			  <br \> <br \>
+			  If you have your own imagery to process and classify, LandCover is executed in five steps: (available in late 2020)<br />
+			  1) Perform top-of-atmosphere (TOA) radiance calibration on raw digital number (DN) imagery.<br />
+From the command line and virtual environment used for the installation steps above, the TOA command is:
+			<pre>
+                          <code>
+[iceberg_rivers] $ iceberg_landcover.rad -ip Data
+                          </code>
+                        </pre>
+			<i>Where Data is the path to the input imagery.</i><br />
+			  <br \> <br \>
+			2) Perform atmospheric corrections on the TOA imagery.
+			<pre>
+                          <code>
+[iceberg_rivers] $ iceberg_landcover.atmcorr -ip Data
+                          </code>
+                        </pre>
+			3) Perform surface reflectance calibration on the atmosphere correctioned imagery.
+			<pre>
+                          <code>
+[iceberg_rivers] $ iceberg_landcover.refl -ip Data
+                          </code>
+                        </pre>
+			4) Use the surface reflectance imagery to create a classification map
+			<pre>
+                          <code>
+[iceberg_rivers] $ iceberg_landcover.classify -ip Data
+                          </code>
+                        </pre>
+			2) Finally, create shapefiles from the classification map.
+			<pre>
+                          <code>
+[iceberg_rivers] $ iceberg_landcover.shapefiles -ip Data
+                          </code>
+                        </pre>
 	        </div>
 		<hr/>
 		<div>
