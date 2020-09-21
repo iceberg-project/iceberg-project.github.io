@@ -227,35 +227,94 @@ From the command line and virtual environment used for the installation steps ab
 From the command line and virtual environment used for the installation steps above, the TOA command is:
 			<pre>
                           <code>
-[iceberg_rivers] $ iceberg_landcover.rad -ip Data
+[iceberg_landcover] $ iceberg_landcover.rad -ip Data
                           </code>
                         </pre>
 			<i>Where Data is the path to the input imagery.</i><br />
+			<br/>
+			The script searches through the inputted path for two file types: raw M1BS(shorthand for 
+			multispectral) .tif(image) files and an M1BS .xml file. The raw image filename does 
+			not contain keywords such as “atmcorr” or “refl” from other Landcover scripts’ outputs 
+			.tif files. Once obtained, the script reads through the metadata present within the .xml file 
+			to determine if the raw image files are either WorldView-2 or WorldView-3 images. 
+			Once determined, the script performs the algorithm as described by Chander et al [1]. 
+			The output file is a TOA radiance image, whose filename is the raw image file’s filename 
+			with the string “_rad” appended to the end of it.
+			<br/>
 			  <br \> <br \>
 			2) Perform atmospheric corrections on the TOA imagery.
 			<pre>
                           <code>
-[iceberg_rivers] $ iceberg_landcover.atmcorr -ip Data
+[iceberg_landcover] $ iceberg_landcover.atmcorr -ip Data
                           </code>
                         </pre>
 			3) Perform surface reflectance calibration on the atmosphere correctioned imagery.
 			<pre>
                           <code>
-[iceberg_rivers] $ iceberg_landcover.refl -ip Data
+[iceberg_landcover] $ iceberg_landcover.refl -ip Data
                           </code>
                         </pre>
+			The script makes use of a dictionary residing within earth_sun_dist.py containing the 
+			Earth-Sun distances in AU. These distances are to be used in the conversion from an 
+			atmospherically-corrected image to a surface reflectance image. Similar to the rad.py script, 
+			this script searches for two file types: atmospherically-corrected .tif (image) files 
+			and an M1BS .xml file. However, if no atmospherically-corrected images exist, the script 
+			will instead use a TOA image, which will be assumed to be atmospherically corrected, to 
+			obtain a surface reflectance image. If the requisite files exist, the script uses the 
+			algorithm described in Updike et al [4]. The output file is a surface reflectance image, 
+			whose filename is the atmospherically-corrected image’s filename with the string “_refl” 
+			appended to the end of it.
+			<br/>
+			<br/>
+			<br/>
 			4) Use the surface reflectance imagery to create a classification map
 			<pre>
                           <code>
-[iceberg_rivers] $ iceberg_landcover.classify -ip Data
+[iceberg_landcover] $ iceberg_landcover.classify -ip Data
                           </code>
                         </pre>
+			The script searches for the output .tif (image) files from refl.py and the corresponding 
+			M1BS .xml file. Once found, the script finds the sum of bands for each pixel. Then, each 
+			individual pixel is classified as either ice, shadow or water, or geology using this sum. 
+			The output file is an image file with each pixel classified under one of the three 
+			aforementioned classifications. Its filename is the surface reflectance image’s filename 
+			but with the string “_class” appended to the end.
+			<br/>
+			<br/>
+			<br/>
 			5) Finally, create shapefiles from the classification map.
 			<pre>
                           <code>
-[iceberg_rivers] $ iceberg_landcover.shapefiles -ip Data
+[iceberg_landcover] $ iceberg_landcover.shapefiles -ip Data
                           </code>
                         </pre>
+			The script searches for the output .tif (image) shapefiles from classify.py. Once found, 
+			it creates the raster shape file by reading each pixel’s classification. The output file 
+			has the same filename as the classified image file but is a .shp file rather than a .tif file.
+			<br/>
+			<br/>
+			<br/>
+			Dependencies:<br/>
+			 GDAL (>=1.11)<br/>
+			 rasterio (1.1.6)<br/>
+			 xml.etree.ElementTree<br/>
+			 argparse<br/>
+			 scipy.stats (1.5.2)<br/>
+			 math<br/>
+			 sys<br/>
+			 numpy<br/>
+			 os<br/>
+			Each version number indicates the latest package version the scripts are known to work with.<br/>
+			<br/>
+			References:<br/>
+			[1] Chander, G., Markham, B.L. & Helder, D.L. 2009. <i>Summary of current radiometric calibration coefficients 
+			for Landsat MSS, TM, ETM1, and EO-1 ALI sensors</i>. Remote Sensing of Environment, 113, 893–903. <br/>
+			[2] Chavez Jr, P.S. 1996. <i>Image-based atmospheric corrections - revisited and improved</i>. 
+			Photogrammetric Engineering & Remote Sensing, 62, 1025–1036.<br/>
+			[3] Lu, D., Mausel, P., Brondizio, E. & Moran, E. 2002. <i>Assessment of atmospheric correction methods for Landsat 
+			TM data applicable to Amazon basin LBA research</i>. International Journal of Remote Sensing, 23, 2651–2671<br/>
+			[4] Updike, T. & Comp, C. 2010. <i>Radiometric use of WorldView-2 imagery: technical note</i>. 
+			Longmont, CO: DigitalGlobe, 16 pp.
 	        </div>
 		<hr/>
 		<div>
